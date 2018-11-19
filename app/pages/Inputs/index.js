@@ -7,8 +7,7 @@ class Inputs extends Component {
     render() {
         return (
             <View>
-                
-                <Text>123</Text>
+                <Text>1235</Text>
             </View>
         );
     }

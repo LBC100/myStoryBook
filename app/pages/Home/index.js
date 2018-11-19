@@ -9,7 +9,7 @@ class Btns extends Component {
                 backgroundColor={'#0f94f6'}
                 borderRadius={10}
                 raised
-                containerViewStyle={{width: 100, marginBottom: 5}}
+                containerViewStyle={{/* width: 100,  */marginBottom: 10}}
                 {...this.props}
             />
         );
