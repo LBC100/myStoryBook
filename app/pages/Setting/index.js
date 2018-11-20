@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, SafeAreaView } from 'react-native';
 import { Button } from 'react-native-elements';
-import { SafeAreaView } from 'react-navigation';
+
 
 class Btns extends Component {
     render() { 
@@ -17,32 +17,21 @@ class Btns extends Component {
     }
 }
 
-class Home extends Component {
+class Setting extends Component {
     static navigationOptions = {
-        title: '组件',
+        title: 'app设置',
     };
     render() {
         const { navigation } = this.props;
         return (
             <View>
                 <Btns
-                    title='Inputs'
-                    onPress={()=>{navigation.navigate('Inputs')}}
+                    title='沉浸式设置'
+                    onPress={()=>{navigation.navigate('Translucent')}}
                 />
-
-                <Btns
-                    title='我是首页'
-                    onPress={()=>{navigation.navigate('Inputs')}}
-                />
-
-                <Btns
-                    title='NavBarPage'
-                    onPress={()=>{navigation.navigate('NavBarPage')}}
-                />
-                
             </View>
         );
     }
 }
  
-export default Home;
+export default Setting;
