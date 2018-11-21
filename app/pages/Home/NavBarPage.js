@@ -3,6 +3,7 @@ import { View, Text } from 'react-native';
 import { Button } from 'react-native-elements';
 import { SafeAreaView } from 'react-navigation';
 
+import NavBarImage from '../../components/NavBarImage'
 import NavBar from '../../components/NavBar'
 
 class NavBarPage extends Component {
@@ -14,6 +15,7 @@ class NavBarPage extends Component {
         return (
             <View>
                 <NavBar />
+                {/* <NavBarImage /> */}
             </View>
         );
     }
