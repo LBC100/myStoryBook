@@ -17,7 +17,7 @@ class NavBarPage extends Component {
             <View>
                 <NavBar
                     // backgroundColor={'red'}
-                    // statusBarbackgroundColor={'rgba(66,175,240,.2)'}
+                    statusBarbackgroundColor={'rgba(66,175,240,.2)'}
                     // leftComponent={ { text: '首页', style: {color: 'red'} } }
                     // leftComponent={ <Icon name="angle-left" size={30} color="#000" onClick={()=>{alert(1)}} /> }
                     leftComponent
