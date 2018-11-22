@@ -2,7 +2,7 @@
  * @Author: 李杰涛 
  * @Date: 2018-11-21 15:26:23 
  * @Last Modified by: 未知
- * @Last Modified time: 2018-11-21 16:02:31
+ * @Last Modified time: 2018-11-22 13:14:45
  * 
  * 依赖库 react-native-iphone-x-helper
  */
@@ -31,7 +31,7 @@ class NavBarAutoHigh extends Component {
         const { backgroundColor } = this.props;
         // console.log('状态栏高度',StatusBar.currentHeight);
         return (
-            <View style={{height: this._getHeight(), backgroundColor: backgroundColor? backgroundColor : '#ccc',}}>
+            <View style={{height: this._getHeight(), backgroundColor: backgroundColor? backgroundColor : '#fff',}}>
 
             </View>
         );

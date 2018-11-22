@@ -16,9 +16,13 @@ class NavBarPage extends Component {
         return (
             <View>
                 <NavBar
-                    // leftComponent={ { text: '首页', style: {color: '#fff'} } }
-                    leftComponent={ <Icon name="angle-left" size={30} color="#000" onClick={()=>{alert(1)}} /> }
-                    centerComponent={ { text: '首页', style: {color: '#fff'} } }
+                    // backgroundColor={'red'}
+                    // statusBarbackgroundColor={'rgba(66,175,240,.2)'}
+                    // leftComponent={ { text: '首页', style: {color: 'red'} } }
+                    // leftComponent={ <Icon name="angle-left" size={30} color="#000" onClick={()=>{alert(1)}} /> }
+                    leftComponent
+                    centerComponent={ { text: '首页', style: {color: '333'} } }
+                    // rightComponent={ <Icon name="angle-left" size={30} color="#000" onClick={()=>{alert(1)}} /> }
                 />
                 {/* <NavBarImage /> */}
             </View>
