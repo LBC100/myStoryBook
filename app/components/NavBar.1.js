@@ -2,7 +2,7 @@
  * @Author: 李杰涛 
  * @Date: 2018-11-21 15:27:26 
  * @Last Modified by: 未知
- * @Last Modified time: 2018-11-22 11:39:20
+ * @Last Modified time: 2018-11-22 11:13:03
  * 依赖库 react-native-iphone-x-helper
  */
 import React, { Component } from 'react';
@@ -46,30 +46,27 @@ class NavBar extends Component {
                 <NavBarAutoHigh
                     backgroundColor={'rgba(66,175,240,.2)'}
                 />
-                <View style={{flexDirection: 'row', /* paddingRight: w(27), */ height: h(80), alignItems: 'center', justifyContent: 'space-between'}}>
-                    
+                <View style={{flexDirection: 'row', paddingRight: w(27), height: h(80), alignItems: 'center', justifyContent: 'space-between'}}>
                     {/* 左边元素 */}
                     <TouchableWithoutFeedback 
                         onPress={()=>{ this._onClick(leftComponent, navigation.pop)}}
                     >
-                        <View style={{ backgroundColor: 'red', width: w(100),  alignItems: 'center', justifyContent: 'center', /* paddingLeft: w(50), paddingRight: w(50), */}}>
+                        <View style={{/* backgroundColor: 'red', */ alignItems: 'center', justifyContent: 'center', paddingLeft: w(27), paddingRight: w(27),}}>
                             {leftComponent && this._generateChild(leftComponent)}
                         </View>
                     </TouchableWithoutFeedback>
-                    
                     {/* 中间 */}
                     <View>
                         <TouchableWithoutFeedback 
                             onPress={()=>{this._onClick(centerComponent)}}
                         >
-                            <View style={{backgroundColor: '#765', alignItems: 'center', justifyContent: 'center', /* paddingLeft: w(27), paddingRight: w(27), */}}>
+                            <View style={{backgroundColor: 'red', alignItems: 'center', justifyContent: 'center', paddingLeft: w(27), paddingRight: w(27),}}>
                                 {centerComponent && this._generateChild(centerComponent)}
                             </View>
                         </TouchableWithoutFeedback>
                     </View>
-
                     {/* 右边元素 */}
-                    <View style={{}}>
+                    <View>
                         <Icon name="home" size={23} color="#000" />
                     </View>
                 </View>
