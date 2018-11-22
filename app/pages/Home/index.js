@@ -3,6 +3,8 @@ import { View, Text } from 'react-native';
 import { Button } from 'react-native-elements';
 import { SafeAreaView } from 'react-navigation';
 
+import NavBarAutoHeight from '../../components/NavBarAutoHeight'
+
 class Btns extends Component {
     render() { 
         return (
@@ -25,6 +27,7 @@ class Home extends Component {
         const { navigation } = this.props;
         return (
             <View>
+                <NavBarAutoHeight />
                 <Btns
                     title='Inputs'
                     onPress={()=>{navigation.navigate('Inputs')}}

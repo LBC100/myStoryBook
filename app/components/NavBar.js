@@ -2,7 +2,7 @@
  * @Author: 李杰涛 
  * @Date: 2018-11-21 15:27:26 
  * @Last Modified by: 未知
- * @Last Modified time: 2018-11-22 13:19:58
+ * @Last Modified time: 2018-11-22 14:55:23
  * 依赖库 react-native-iphone-x-helper
  * 用法
  * 传入文字和文字样式
@@ -28,7 +28,7 @@ import { Button, Header } from 'react-native-elements';
 import { SafeAreaView, withNavigation } from 'react-navigation';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-import NavBarAutoHigh from './NavBarAutoHigh'
+import NavBarAutoHeight from './NavBarAutoHeight'
 
 class NavBar extends Component {
     
@@ -80,7 +80,7 @@ class NavBar extends Component {
         return (
             <View style={{backgroundColor: backgroundColor ? backgroundColor : '#fff',}}>
                 {/* 状态栏 */}
-                <NavBarAutoHigh
+                <NavBarAutoHeight
                     backgroundColor={statusBarbackgroundColor ? statusBarbackgroundColor : ''}
                 />
                 <View style={{flexDirection: 'row', height: h(80), alignItems: 'center',}}>

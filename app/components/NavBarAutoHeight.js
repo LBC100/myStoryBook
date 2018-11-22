@@ -2,7 +2,7 @@
  * @Author: 李杰涛 
  * @Date: 2018-11-21 15:26:23 
  * @Last Modified by: 未知
- * @Last Modified time: 2018-11-22 14:23:25
+ * @Last Modified time: 2018-11-22 14:49:45
  * 
  * 依赖库 react-native-iphone-x-helper
  */
@@ -11,7 +11,7 @@ import { View, Text, StatusBar, Platform } from 'react-native';
 import { isIphoneX } from 'react-native-iphone-x-helper';
 
 
-class NavBarAutoHigh extends Component {
+class NavBarAutoHeight extends Component {
     static navigationOptions = {
         title: 'NavBar',
     };
@@ -39,4 +39,4 @@ class NavBarAutoHigh extends Component {
     }
 }
  
-export default NavBarAutoHigh;
+export default NavBarAutoHeight;
