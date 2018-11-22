@@ -17,7 +17,7 @@ class NavBarPage extends Component {
             <View>
                 <NavBar
                     statusBarbackgroundColor={'rgba(66,175,240,.2)'}leftComponent
-                    centerComponent={ { text: '首页', style: {color: '333'} } }
+                    centerComponent={ { text: '首页', style: {color: '#333'} } }
                 />
                 {/* <NavBarImage /> */}
             </View>

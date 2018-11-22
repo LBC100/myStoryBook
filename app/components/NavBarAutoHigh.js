@@ -2,7 +2,7 @@
  * @Author: 李杰涛 
  * @Date: 2018-11-21 15:26:23 
  * @Last Modified by: 未知
- * @Last Modified time: 2018-11-22 14:15:32
+ * @Last Modified time: 2018-11-22 14:23:25
  * 
  * 依赖库 react-native-iphone-x-helper
  */
@@ -23,7 +23,7 @@ class NavBarAutoHigh extends Component {
             appHeight = StatusBar.currentHeight;
         }else if(isIphoneX()){
             appHeight = 44;
-        }else {
+        }else if(Platform.OS === 'ios'){
             appHeight = 20;
         }
         return appHeight
