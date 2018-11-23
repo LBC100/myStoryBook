@@ -5,4 +5,5 @@ import './global';  // 全局变量
 import Root from './Root'
 
 
+
 AppRegistry.registerComponent(appName, () => Root);
