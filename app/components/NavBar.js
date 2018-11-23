@@ -28,7 +28,7 @@ import { Button, Header } from 'react-native-elements';
 import { SafeAreaView, withNavigation } from 'react-navigation';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-import NavBarAutoHeight from './NavBarAutoHeight'
+import StatusBarAutoHeight from './StatusBarAutoHeight'
 
 class NavBar extends Component {
     
@@ -80,7 +80,7 @@ class NavBar extends Component {
         return (
             <View style={{backgroundColor: backgroundColor ? backgroundColor : '#fff',}}>
                 {/* 状态栏 */}
-                <NavBarAutoHeight
+                <StatusBarAutoHeight
                     backgroundColor={statusBarbackgroundColor ? statusBarbackgroundColor : ''}
                 />
                 <View style={{flexDirection: 'row', height: h(80), alignItems: 'center',}}>

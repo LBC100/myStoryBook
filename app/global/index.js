@@ -6,3 +6,4 @@ global.w = widthRatio;
 global.h = widthRatio;
 global.p = scaleSize;
 
+global.p = scaleSize;
