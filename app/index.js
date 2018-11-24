@@ -2,8 +2,8 @@ import { AppRegistry } from 'react-native';
 import { name as appName } from '../app.json';
 
 import './global';  // 全局变量
-import Root from './Root'
+import AppInit from './config/AppInit'
 
 
 
-AppRegistry.registerComponent(appName, () => Root);
+AppRegistry.registerComponent(appName, () => AppInit);

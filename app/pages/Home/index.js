@@ -34,7 +34,7 @@ class Home extends Component {
                 />
 
                 <Btns
-                    title='我是首页'
+                    title='我是首页1'
                     onPress={()=>{navigation.navigate('Inputs')}}
                 />
 
