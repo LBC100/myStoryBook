@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, SafeAreaView } from 'react-native';
 import { Button } from 'react-native-elements';
 
+import StatusBarAutoHeight from '../../components/StatusBarAutoHeight'
 
 class Btns extends Component {
     render() { 
@@ -25,10 +26,10 @@ class Setting extends Component {
         const { navigation } = this.props;
         return (
             <View>
+                <GStatusBar />
                 <Btns
                     title='沉浸式设置'
-                    onPress={()=>{navigation.navigate('Translucent')}}
-                />
+                    onPress={()=>{navigation.navigate('Translucent')}} />
             </View>
         );
     }
