@@ -12,7 +12,7 @@ import {
     Platform
 } from 'react-native';
 
-import AppNavigator from './AppNavigator';
+import BottomTabNavigator from './BottomTabNavigator';
 
 
 class AppInit extends Component {

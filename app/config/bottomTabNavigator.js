@@ -7,7 +7,7 @@ import Setting from '../pages/Setting';
 
 
 // 底部导航内容页及导航栏样式图标.
-const bottomTabNavigator = createBottomTabNavigator(
+const BottomTabNavigator = createBottomTabNavigator(
     {
         Home: { screen: Home },
         Setting: { screen: Setting },
@@ -18,4 +18,4 @@ const bottomTabNavigator = createBottomTabNavigator(
 );
 
 
-export default bottomTabNavigator;
+export default BottomTabNavigator;
