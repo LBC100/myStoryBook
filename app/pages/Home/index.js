@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, BackHandler, ToastAndroid } from 'react-native';
 import { Button } from 'react-native-elements';
 import { SafeAreaView } from 'react-navigation';
 
@@ -23,8 +23,36 @@ class Home extends Component {
     static navigationOptions = {
         title: '组件',
     };
+
+    // componentWillUnmount() {
+    //     BackHandler.removeEventListener('hardwareBackPress', this._onBackAndroid);
+    // }
+    // componentWillMount() {
+    //     BackHandler.addEventListener('hardwareBackPress', this._onBackAndroid);
+    // }
+
+    // _onBackAndroid = () => {
+    //     const { navigation } = this.props;
+    //     console.log(this.props)
+    //     if (this.lastBackPressed && this.lastBackPressed + 2000 >= Date.now()) {
+    //         //最近2秒内按过back键，可以退出应用。
+    //         BackHandler.exitApp();
+    //         return false;
+    //     }
+    //     if (navigation.state.routeName !== "App") {
+    //         console.log(999,navigation);
+    //         navigation.pop();
+    //         return true;
+    //     }
+
+    //     this.lastBackPressed = Date.now();
+    //     ToastAndroid.show('再按一次退出应用', ToastAndroid.SHORT);
+    //     return true;
+    // };
+
     render() {
         const { navigation } = this.props;
+        console.log(this.props)
         return (
             <View>
                 <StatusBarAutoHeight />

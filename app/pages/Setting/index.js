@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, SafeAreaView } from 'react-native';
+import { View, Text, SafeAreaView, BackHandler, ToastAndroid } from 'react-native';
 import { Button } from 'react-native-elements';
 
 import StatusBarAutoHeight from '../../components/StatusBarAutoHeight'
@@ -22,6 +22,7 @@ class Setting extends Component {
     static navigationOptions = {
         title: 'app设置',
     };
+    
     render() {
         const { navigation } = this.props;
         return (

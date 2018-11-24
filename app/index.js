@@ -17,4 +17,4 @@ class Index extends Component {
 }
 
 
-AppRegistry.registerComponent(appName, () => Index);
+AppRegistry.registerComponent(appName, () => AppInit);

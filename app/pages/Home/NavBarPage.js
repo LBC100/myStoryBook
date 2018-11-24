@@ -13,6 +13,7 @@ class NavBarPage extends Component {
     };
     render() {
         const { navigation } = this.props;
+        console.log('NavBarPage', this.props)
         return (
             <View>
                 <NavBar
