@@ -3,6 +3,7 @@ import { View, Text, BackHandler, ToastAndroid } from 'react-native';
 import { Button } from 'react-native-elements';
 import { SafeAreaView } from 'react-navigation';
 
+import { data } from '../../config/data'
 import StatusBarAutoHeight from '../../components/StatusBarAutoHeight'
 import HandleBack from '../../components/HandleBack'
 
@@ -41,18 +42,14 @@ class Home extends Component {
             <HandleBack _onBack={this._onBack}>
                 <View>
                     <StatusBarAutoHeight />
-                    <Btns
-                        title='Inputs'
-                        onPress={()=>{navigation.navigate('Inputs')}} />
 
-                    <Btns
-                        title='我是首页2'
-                        onPress={()=>{navigation.navigate('Inputs')}} />
-
-                    <Btns
-                        title='NavBarPage'
-                        onPress={()=>{navigation.navigate('NavBarPage')}} />
-                    
+                    {
+                        data.map((e, i) => {
+                            return <Btns
+                                    title={e.title}
+                                    onPress={()=>{navigation.navigate(`${e.toPage}`)}} />
+                        })
+                    }
                 </View>
             </HandleBack>
         );
