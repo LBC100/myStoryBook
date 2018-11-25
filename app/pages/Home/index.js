@@ -14,8 +14,7 @@ class Btns extends Component {
                 borderRadius={10}
                 raised
                 containerViewStyle={{/* width: 100,  */marginBottom: 10}}
-                {...this.props}
-            />
+                {...this.props} />
         );
     }
 }
@@ -44,18 +43,15 @@ class Home extends Component {
                     <StatusBarAutoHeight />
                     <Btns
                         title='Inputs'
-                        onPress={()=>{navigation.navigate('Inputs')}}
-                    />
+                        onPress={()=>{navigation.navigate('Inputs')}} />
 
                     <Btns
                         title='我是首页2'
-                        onPress={()=>{navigation.navigate('Inputs')}}
-                    />
+                        onPress={()=>{navigation.navigate('Inputs')}} />
 
                     <Btns
                         title='NavBarPage'
-                        onPress={()=>{navigation.navigate('NavBarPage')}}
-                    />
+                        onPress={()=>{navigation.navigate('NavBarPage')}} />
                     
                 </View>
             </HandleBack>
