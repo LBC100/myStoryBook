@@ -11,7 +11,6 @@ import NavBar from '../../components/NavBar'
 class NavBarPage extends Component {
     constructor(props) {
         super(props);
-        BackHandler.addEventListener('hardwareBackPress', this._onBackAndroid);
         this.state = {  }
     }
     

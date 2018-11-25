@@ -16,7 +16,7 @@ import {
 import AppNavigator from './AppNavigator'
 
 
-class AppInit extends Component {
+class Root extends Component {
     componentDidMount() {
         // 沉浸式
         // StatusBar.setBarStyle('light-content');  //白色
@@ -33,4 +33,4 @@ class AppInit extends Component {
     }
 }
  
-export default AppInit;
+export default Root;
