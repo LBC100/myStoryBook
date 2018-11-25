@@ -24,35 +24,10 @@ class Home extends Component {
         title: '组件',
     };
 
-    // componentWillUnmount() {
-    //     BackHandler.removeEventListener('hardwareBackPress', this._onBackAndroid);
-    // }
-    // componentWillMount() {
-    //     BackHandler.addEventListener('hardwareBackPress', this._onBackAndroid);
-    // }
-
-    // _onBackAndroid = () => {
-    //     const { navigation } = this.props;
-    //     console.log(this.props)
-    //     if (this.lastBackPressed && this.lastBackPressed + 2000 >= Date.now()) {
-    //         //最近2秒内按过back键，可以退出应用。
-    //         BackHandler.exitApp();
-    //         return false;
-    //     }
-    //     if (navigation.state.routeName !== "App") {
-    //         console.log(999,navigation);
-    //         navigation.pop();
-    //         return true;
-    //     }
-
-    //     this.lastBackPressed = Date.now();
-    //     ToastAndroid.show('再按一次退出应用', ToastAndroid.SHORT);
-    //     return true;
-    // };
+    
 
     render() {
         const { navigation } = this.props;
-        console.log(this.props)
         return (
             <View>
                 <StatusBarAutoHeight />
@@ -62,7 +37,7 @@ class Home extends Component {
                 />
 
                 <Btns
-                    title='我是首页1'
+                    title='我是首页2'
                     onPress={()=>{navigation.navigate('Inputs')}}
                 />
 

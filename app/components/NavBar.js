@@ -2,7 +2,7 @@
  * @Author: 李杰涛 
  * @Date: 2018-11-21 15:27:26 
  * @Last Modified by: 未知
- * @Last Modified time: 2018-11-22 14:55:23
+ * @Last Modified time: 2018-11-24 23:01:51
  * 依赖库 react-native-iphone-x-helper
  * 用法
  * 传入文字和文字样式
@@ -76,7 +76,6 @@ class NavBar extends Component {
             backgroundColor,
             statusBarbackgroundColor
         } = this.props;
-        console.log('左边',leftComponent)
         return (
             <View style={{backgroundColor: backgroundColor ? backgroundColor : '#fff',}}>
                 {/* 状态栏 */}
