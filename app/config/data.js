@@ -10,5 +10,9 @@ export const data = [
     {
         title: 'Input',
         toPage: 'InputPage'
+    },
+    {
+        title: 'Protocol',
+        toPage: 'ProtocolPage'
     }
 ]

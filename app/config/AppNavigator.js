@@ -6,9 +6,8 @@ import BottomTabNavigator from './BottomTabNavigator'; // 底部导航栏
 // 组件
 import NavBarPage from '../components/NavBar/NavBarPage'
 import VerifiCodeBtnPage from '../components/VerifiCodeBtn/VerifiCodeBtnPage'
-
 import InputPage from '../components/Input/InputPage' //输入框
-import Translucent from '../pages/Setting/Translucent' //沉浸式
+import ProtocolPage from '../components/Protocol/ProtocolPage'
 
 
 
@@ -20,9 +19,8 @@ export default createStackNavigator(
 
         NavBarPage: { screen: NavBarPage }, // 沉浸式头部NavBar
         VerifiCodeBtnPage: { screen: VerifiCodeBtnPage }, // 验证码
-
-        InputPage: { screen: InputPage },
-        Translucent: { screen: Translucent },
+        InputPage: { screen: InputPage }, // Input
+        ProtocolPage: { screen: ProtocolPage }, // 协议
         
     },
     {

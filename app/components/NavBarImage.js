@@ -5,6 +5,7 @@ import { SafeAreaView, withNavigation } from 'react-navigation';
 import { isIphoneX } from 'react-native-iphone-x-helper';
 
 import StatusBarAutoHeight from './StatusBarAutoHeight'
+import Images from '../assets/images/Images';
 
 class NavBar extends Component {
     static navigationOptions = {
@@ -25,7 +26,7 @@ class NavBar extends Component {
     render() {
         const { navigation } = this.props;
         return (
-            <ImageBackground style={{height: h(290) + this._getHeight(), width: w(750), backgroundColor: '#ccc',}} source={require('../assets/img/Bar/lbt.gif')}>
+            <ImageBackground style={{height: h(290) + this._getHeight(), width: w(750), backgroundColor: '#ccc',}} source={Images.bar.lbt}>
                 <StatusBarAutoHeight />
                 <View >
                 </View>

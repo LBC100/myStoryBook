@@ -30,7 +30,7 @@ class Setting extends Component {
                 <GStatusBar />
                 <Btns
                     title='沉浸式设置'
-                    onPress={()=>{navigation.navigate('Translucent')}} />
+                    onPress={()=>{navigation.navigate('')}} />
             </View>
         );
     }
