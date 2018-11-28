@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { View, BackHandler, ToastAndroid } from 'react-native';
+import { View, BackHandler, ToastAndroid, Image } from 'react-native';
 import { Button, Card, Text } from 'react-native-elements';
 import { SafeAreaView } from 'react-navigation';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 import NavBar from '../NavBar'
 import Protocol from './Protocol'
+import Images from '../../assets/images/Images';
 
 
 class ProtocolPage extends Component {
@@ -51,7 +52,7 @@ class ProtocolPage extends Component {
                         title={'我已阅读并同意'}
                         protocol={protocol}
                         onPress={()=>{this.setState({ protocol: !protocol });}} // 点击取反勾选状态
-                        // checkElement={<Image source={} style={{width: p(26), height: p(26),}}/>}
+                        checkElement={<Image source={Images.bottomTab.BottomBar_03} style={{width: p(26), height: p(26),}}/>}
                         // uncheckedElement={{}}
                         agreement={[<Text style={{color: '#e49b2d', fontSize: p(24)}}>《注册协议》</Text>]} />
                     

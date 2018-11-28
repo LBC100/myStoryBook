@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { View, Text, BackHandler, ToastAndroid } from 'react-native';
+import { View, Text, BackHandler, ToastAndroid, Image } from 'react-native';
 import { Button } from 'react-native-elements';
 import { SafeAreaView } from 'react-navigation';
 
 import { data } from '../../config/data'
 import StatusBarAutoHeight from '../../components/StatusBarAutoHeight'
 import HandleBack from '../../components/HandleBack'
+import Images from '../../assets/images/Images';
 
 class Btns extends Component {
     render() { 
@@ -50,6 +51,9 @@ class Home extends Component {
                                     onPress={()=>{navigation.navigate(`${e.toPage}`)}} />
                         })
                     }
+                    <Image style={{width: 100, height: 100,}} source={{uri: 'http://img0.imgtn.bdimg.com/it/u=1723256192,495732526&fm=26&gp=0.jpg'}} />
+                    <Image style={{width: 50, height: 50,}} source={Images.bar.lbt} />
+                
                 </View>
             </HandleBack>
         );
