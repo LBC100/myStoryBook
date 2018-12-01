@@ -2,7 +2,7 @@
  * @Author: 李杰涛 
  * @Date: 2018-11-21 10:36:22 
  * @Last Modified by: 未知
- * @Last Modified time: 2018-11-28 19:28:49
+ * @Last Modified time: 2018-11-29 10:12:07
  * 
  * <VerifiCodeBtn
         waitTime={3} // 倒计时时间
@@ -105,3 +105,29 @@ class VerifiCodeBtn extends Component {
 }
 
 export default VerifiCodeBtn;
+
+// 发送获取手机验证码请求
+// _phoneVerifCode = (setSendStatus, success) => {
+//     const _this = this;
+//     let url = `${urlConfig.baseApi}${urlConfig.public.phoneVerifCode}`
+//     setSendStatus('发送中...')
+//     axios({
+//         method: 'post',
+//         url: url,
+//         params: {
+//             mobile: _this.state.phone,
+//         }
+//     }).then(({data})=>{
+//         console.log('忘记密码页,发送获取手机验证码请求===>',url, data)
+//         if(data.result == 0) {
+//             Toast.fail(data.msg);
+//             setSendStatus(false);
+//         }else if(data.result == 1) {
+//             Toast.success('短信验证码发送成功');
+//             success();
+//         }
+//     }).catch((error) => {
+//         Toast.message('服务器错误')
+//         console.log(error);
+//     });
+// }
