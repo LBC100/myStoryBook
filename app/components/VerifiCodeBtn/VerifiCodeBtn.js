@@ -2,15 +2,19 @@
  * @Author: 李杰涛 
  * @Date: 2018-11-21 10:36:22 
  * @Last Modified by: 未知
- * @Last Modified time: 2018-11-27 14:14:24
+ * @Last Modified time: 2018-11-29 10:12:07
  * 
  * <VerifiCodeBtn
-        waitTime={5}  // 倒计时时间
-        onPress={() =>{}} // 点击事件
-        success={()=>{}} // 验证码发送成功事件
-        failure={()=>{}} // 验证码发送失败事件
-        sendStatus={bool} // 发送状态
+        waitTime={3} // 倒计时时间
+        onPress={this._phoneVerifCode} // 点击事件(发送短信请求的函数)
     />
+    请求函数的两个回调函数 setSendStatus, success
+    _phoneVerifCode = (setSendStatus, success) =>{
+        setSendStatus('发送中...');  // 发送中
+        setSendStatus(false);  // 发送失败
+        success(); // 发送成功
+    } 
+    
  */
 import React, { Component } from 'react';
 import {
@@ -22,8 +26,6 @@ import {
     TouchableOpacity,
     TouchableWithoutFeedback
 } from 'react-native';
-
-// 导出VerifiCodeBtn组件
 class VerifiCodeBtn extends Component {
     constructor(props) {
         super(props);
@@ -32,46 +34,34 @@ class VerifiCodeBtn extends Component {
             text2: `重新获取(${props.waitTime}s)`,
             waitTime: props.waitTime,
             sendStatus: false,
-            countDownStatus: false
+            countDownStatus: true
         }
     }
 
-    componentWillReceiveProps(nextProps) {
-        // console.log('获取验证码',nextProps)
-        //  发送代码成功则调用倒计时
-        if(nextProps.sendStatus === true) {
-            // 更新状态
-            this.setState({
-                ...this.state,
-                sendStatus: nextProps.sendStatus
-            });
-            // 发送成功要执行的代码
-            this._countDown();  // 执行倒计时
-            nextProps.success && nextProps.success(); 
-            
-        }else if(nextProps.sendStatus === false){
-            // 发送失败要执行的代码
-            nextProps.failure && nextProps.failure();
-            // 更新状态
-            this.setState({
-                ...this.state,
-                sendStatus: nextProps.sendStatus
-            });
-        }
-    }
 
     // 点击的时候
     _onClick = () => {
-        this.props.onPress && this.props.onPress();
-        this.setState({ sendStatus: '发送中...' });
+        // 把函数传回父组件
+        this.props.onPress && this.props.onPress(this._setSendStatus, this._success);
+    }
+
+    // 更改状态函数
+    _setSendStatus = (sendStatus) => {
+        this.setState({ sendStatus: sendStatus });
+    }
+
+    // 发送成功
+    _success = () => {
+        this.setState({ sendStatus: true }); // 把状态改为真
+        this._countDown(); // 执行倒计时
     }
 
     // 倒计时
-    _countDown = (status) => {
+    _countDown = () => {
         const { text2, textStatus, waitTime } = this.state;
-
         const _this = this;
-
+        _this.setState({ sendStatus: true });
+        
         let num = waitTime;
         this.timer = setInterval(() => {
             num --;
@@ -86,7 +76,8 @@ class VerifiCodeBtn extends Component {
     }
 
     _renderItem = () => {
-        const { sendStatus, text2, countDownStatus } = this.state;
+        const { text2, countDownStatus, sendStatus } = this.state;
+        
         if(sendStatus === '发送中...') {
             return <Text style={{fontSize: p(28), color: '#e49b2d'}}>{'发送中...'}</Text>
         } else if(sendStatus === true) {
@@ -114,3 +105,29 @@ class VerifiCodeBtn extends Component {
 }
 
 export default VerifiCodeBtn;
+
+// 发送获取手机验证码请求
+// _phoneVerifCode = (setSendStatus, success) => {
+//     const _this = this;
+//     let url = `${urlConfig.baseApi}${urlConfig.public.phoneVerifCode}`
+//     setSendStatus('发送中...')
+//     axios({
+//         method: 'post',
+//         url: url,
+//         params: {
+//             mobile: _this.state.phone,
+//         }
+//     }).then(({data})=>{
+//         console.log('忘记密码页,发送获取手机验证码请求===>',url, data)
+//         if(data.result == 0) {
+//             Toast.fail(data.msg);
+//             setSendStatus(false);
+//         }else if(data.result == 1) {
+//             Toast.success('短信验证码发送成功');
+//             success();
+//         }
+//     }).catch((error) => {
+//         Toast.message('服务器错误')
+//         console.log(error);
+//     });
+// }

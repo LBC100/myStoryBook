@@ -43,7 +43,6 @@ class Home extends Component {
             <HandleBack _onBack={this._onBack}>
                 <View>
                     <StatusBarAutoHeight />
-
                     {
                         data.map((e, i) => {
                             return <Btns
@@ -51,9 +50,6 @@ class Home extends Component {
                                     onPress={()=>{navigation.navigate(`${e.toPage}`)}} />
                         })
                     }
-                    <Image style={{width: 100, height: 100,}} source={{uri: 'http://img0.imgtn.bdimg.com/it/u=1723256192,495732526&fm=26&gp=0.jpg'}} />
-                    <Image style={{width: 50, height: 50,}} source={Images.bar.lbt} />
-                
                 </View>
             </HandleBack>
         );

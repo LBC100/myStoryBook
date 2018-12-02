@@ -24,6 +24,22 @@ class VerifiCodeBtnPage extends Component {
         }, 2000);
     }
 
+    // 发送获取手机验证码请求
+    _phoneVerifCode = (setSendStatus, success) => {
+        setSendStatus('发送中...');
+
+        this.t1 = setTimeout(() => {
+            // setSendStatus(false);
+            success();
+        }, 2000);
+        
+        
+    }
+
+    componentWillUnmount() {
+        clearTimeout(this.t1);
+    }
+
     render() {
         const { navigation } = this.props;
         return (
@@ -46,12 +62,12 @@ class VerifiCodeBtnPage extends Component {
         sendStatus={bool} // 发送状态
     />`}  
                     </Text>
-                    <VerifiCodeBtn 
-                        onPress={() =>{this._onClick()}}
-                        sendStatus={this.state.sendStatus}
-                        success={()=>{alert('发送成功')}}
-                        failure={()=>{alert('发送失败')}}
-                        waitTime={5} />
+
+                    <VerifiCodeBtn
+                        waitTime={3} // 倒计时时间
+                        onPress={this._phoneVerifCode} // 点击事件(发送短信请求的函数)
+                    />
+                    
                 </Card>
             </View>
         );
